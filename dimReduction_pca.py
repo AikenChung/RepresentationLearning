@@ -4,7 +4,7 @@ Created on Tue Dec 22 16:37:23 2020
 
 @author: Aiken
 
-For running 3D PCA analysis on MN, FSGS, and IgAN datasets of JuCKD.
+For running 3D PCA analysis on MN, FSGS, and IgAN datasets.
 """
 
 import pandas as pd
