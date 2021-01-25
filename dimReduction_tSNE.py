@@ -48,9 +48,9 @@ colors = ['b', 'r','g','orange']
 # for 2D ploting
 fig0 = plt.figure(figsize = (8,8))
 ax0 = fig0.add_subplot(1,1,1) 
-ax0.set_xlabel('PC-1', fontsize = 15)
-ax0.set_ylabel('PC-2', fontsize = 15)
-ax0.set_title(('PCA - 2D'), fontsize = 20)
+ax0.set_xlabel('Component-1', fontsize = 15)
+ax0.set_ylabel('Component-2', fontsize = 15)
+ax0.set_title(('tSNE - 2D'), fontsize = 20)
 
 for target, color in zip(targets,colors):
     indicesToKeep = groupColumnData['Group'] == target
@@ -64,9 +64,9 @@ ax0.legend(targets)
 fig = plt.figure(figsize = (10,8))
 
 ax = fig.add_subplot(111, projection='3d')
-ax.set_xlabel('\nPC-1', fontsize = 15)
-ax.set_ylabel('\nPC-2', fontsize = 15)
-ax.set_zlabel('\nPC-3', fontsize = 15)
+ax.set_xlabel('\nComponent-1', fontsize = 15)
+ax.set_ylabel('\nComponent-2', fontsize = 15)
+ax.set_zlabel('\nComponent-3', fontsize = 15)
 ax.tick_params(axis='x', which='major', pad=0.01)
 plt.rc('xtick',labelsize=14)
 
@@ -74,7 +74,7 @@ plt.rc('xtick',labelsize=14)
 ax.tick_params(axis='y', which='major', pad=0.01)
 ax.tick_params(axis='z', which='major', pad=0.01)
 ax.zaxis.labelpad = -5
-ax.set_title(('PCA - 3D'), fontsize = 20)
+ax.set_title(('tSNE - 3D'), fontsize = 20)
 
 for target, color in zip(targets,colors):
     indicesToKeep = groupColumnData['Group'] == target
